@@ -18,7 +18,7 @@ claude: 🌙 Overnight  | 4 new mails, one from your advisor needs a reply
 >
 > **It is vibe-coded.** This was built fast and iteratively with an LLM. It is not formally tested, reviewed, or audited. Read the scripts yourself before you trust them; they are short on purpose.
 >
-> **It can touch everything on your machine.** These skills run inside Claude Code, which can read and modify files and run shell commands on your Mac, and they hand the assistant a working path into your calendar, mail, and reminders. Everything runs locally and nothing is sent to a third party, but "local" still means full local access. Only install this if you are comfortable letting an LLM read your data and act on your machine on your behalf.
+> **It can touch everything on your machine.** These skills run inside Claude Code, which can read and modify files and run shell commands on your Mac, and they hand the assistant a working path into your calendar, mail, and reminders. The scripts run locally and do not send your data anywhere themselves, but anything Claude reads through them (mail, events, reminders) becomes conversation context and is sent to **Anthropic's servers** for the model to process, just like everything else in a Claude Code session. Only install this if you are comfortable letting an LLM read your data and act on your machine on your behalf.
 
 ## What's in the box
 
