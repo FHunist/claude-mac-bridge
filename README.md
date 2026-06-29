@@ -70,7 +70,7 @@ These skills are deliberately conservative:
 
 - **Mail is read + flag only.** It never sends, deletes, archives, or marks messages read.
 - **Calendar and todos confirm before destructive or shared writes.** The skill instructions tell Claude to ask before deleting, before touching shared/invited events, and before bulk edits.
-- **Everything is local.** Nothing leaves your Mac; there are no API keys and no network calls beyond what the Apple apps already do to sync your accounts.
+- **The scripts are local; the conversation is not.** The skill scripts have no API keys and make no network calls of their own beyond what the Apple apps already do to sync. But whatever Claude reads through them becomes Claude Code conversation context and is sent to **Anthropic's servers** for the model to process, like any other prompt.
 
 Read each `SKILL.md` before installing; it is the exact instruction set Claude follows.
 
