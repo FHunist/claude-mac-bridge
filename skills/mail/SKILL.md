@@ -28,5 +28,5 @@ Wrap the routine in a loop: **`/loop 45m /mail`** (runs while the Mac and a sess
 ## Guardrails
 - **Read + flag only.** Drafting a reply is fine (tell the user, or use a Gmail connector's `create_draft` if available), but **never auto-send, delete, archive, or mark-read** without explicit say-so.
 - Do not flag mailing-list/newsletter noise as Action.
-- Account names must match Mail.app exactly, including punctuation (e.g. an account literally named `Yahoo!` needs the `!`).
+- Account names must match Mail.app exactly, including any punctuation or spaces. Copy the name as shown under Mail > Settings > Accounts.
 - Mail's unified-inbox `count` is very slow: always read per-account with the bounded slice (the scripts already do this). Do not iterate the unified `inbox`.
