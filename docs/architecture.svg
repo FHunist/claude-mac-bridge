@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 486" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#8A8780"/></marker>
+    <marker id="arrC" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#C2553A"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="980" height="486" fill="#FBFAF8"/>
+  <text x="32" y="40" font-size="18" font-weight="700" fill="#2E2D29">How claude-mac-bridge works</text>
+
+  <!-- Your Mac container -->
+  <rect x="225" y="58" width="525" height="388" rx="16" fill="#FFFFFF" stroke="#C9C5BE" stroke-width="1.5"/>
+  <text x="245" y="84" font-size="12.5" font-weight="700" letter-spacing="1" fill="#A8A399">YOUR MAC (LOCAL)</text>
+
+  <!-- You -->
+  <rect x="28" y="196" width="124" height="66" rx="12" fill="#FFFFFF" stroke="#C9C5BE" stroke-width="1.5"/>
+  <text x="90" y="226" font-size="16" font-weight="700" fill="#2E2D29" text-anchor="middle">You</text>
+  <text x="90" y="245" font-size="10.5" fill="#8A8780" text-anchor="middle">ask, in plain words</text>
+  <text x="90" y="290" font-size="11" font-style="italic" fill="#9A968D" text-anchor="middle">&#8220;/plan-day&#8221;</text>
+  <text x="90" y="307" font-size="11" font-style="italic" fill="#9A968D" text-anchor="middle">&#8220;triage my inbox&#8221;</text>
+
+  <!-- You -> Claude Code -->
+  <line x1="152" y1="222" x2="350" y2="128" stroke="#8A8780" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="232" y="134" font-size="10.5" fill="#8A8780" text-anchor="middle" transform="rotate(-25 232 134)">asks in natural language</text>
+
+  <!-- Claude Code -->
+  <rect x="352" y="96" width="196" height="64" rx="12" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <text x="450" y="122" font-size="16" font-weight="700" fill="#2E2D29" text-anchor="middle">Claude Code</text>
+  <text x="450" y="142" font-size="10.5" fill="#8A8780" text-anchor="middle">the agent, on your Mac</text>
+
+  <!-- Anthropic cloud -->
+  <rect x="788" y="90" width="168" height="84" rx="18" fill="#D97757"/>
+  <text x="872" y="126" font-size="14.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Anthropic servers</text>
+  <text x="872" y="146" font-size="10.5" fill="#FCE6DC" text-anchor="middle">the model runs here</text>
+
+  <!-- Claude Code <-> Anthropic (coral = leaves the Mac) -->
+  <line x1="548" y1="116" x2="786" y2="116" stroke="#C2553A" stroke-width="2" marker-end="url(#arrC)"/>
+  <text x="667" y="108" font-size="10.5" fill="#C2553A" text-anchor="middle">prompt + whatever it reads</text>
+  <line x1="786" y1="150" x2="548" y2="150" stroke="#C2553A" stroke-width="2" marker-end="url(#arrC)"/>
+  <text x="667" y="165" font-size="10.5" fill="#8A8780" text-anchor="middle">model&#8217;s response</text>
+  <text x="763" y="200" font-size="10" font-weight="600" fill="#C2553A" text-anchor="middle">leaves your Mac</text>
+
+  <!-- Claude Code -> bridge -->
+  <line x1="450" y1="160" x2="450" y2="210" stroke="#8A8780" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="462" y="188" font-size="10.5" fill="#8A8780" text-anchor="start">runs skill scripts</text>
+
+  <!-- Local bridge -->
+  <rect x="345" y="210" width="210" height="58" rx="12" fill="#F2F0EB" stroke="#C9C5BE" stroke-width="1.5"/>
+  <text x="450" y="234" font-size="14" font-weight="700" fill="#4A4843" text-anchor="middle">Local bridge</text>
+  <text x="450" y="253" font-size="10.5" fill="#8A8780" text-anchor="middle">AppleScript &#183; icalBuddy &#183; shell</text>
+
+  <!-- bridge -> apps -->
+  <line x1="450" y1="268" x2="450" y2="302" stroke="#8A8780" stroke-width="1.6"/>
+  <line x1="324" y1="302" x2="656" y2="302" stroke="#8A8780" stroke-width="1.6"/>
+  <line x1="324" y1="302" x2="324" y2="320" stroke="#8A8780" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="490" y1="302" x2="490" y2="320" stroke="#8A8780" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="656" y1="302" x2="656" y2="320" stroke="#8A8780" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- App chips -->
+  <rect x="244" y="322" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#DDD8D0" stroke-width="1.5"/>
+  <rect x="260" y="338" width="22" height="22" rx="6" fill="#FF3B30"/>
+  <text x="292" y="347" font-size="13" font-weight="600" fill="#2E2D29">Calendar</text>
+  <text x="292" y="363" font-size="9.5" fill="#8A8780">read + write</text>
+
+  <rect x="410" y="322" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#DDD8D0" stroke-width="1.5"/>
+  <rect x="426" y="338" width="22" height="22" rx="6" fill="#0A84FF"/>
+  <text x="458" y="347" font-size="13" font-weight="600" fill="#2E2D29">Mail</text>
+  <text x="458" y="363" font-size="9.5" fill="#8A8780">read + flag only</text>
+
+  <rect x="576" y="322" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#DDD8D0" stroke-width="1.5"/>
+  <rect x="592" y="338" width="22" height="22" rx="6" fill="#FF9F0A"/>
+  <text x="624" y="347" font-size="13" font-weight="600" fill="#2E2D29">Reminders</text>
+  <text x="624" y="363" font-size="9.5" fill="#8A8780">read + write</text>
+
+  <text x="490" y="404" font-size="10" fill="#A8A399" text-anchor="middle">your iCloud / Google / Exchange accounts already sync into these apps</text>
+
+  <!-- bottom caption -->
+  <text x="490" y="470" font-size="11" fill="#6B6960" text-anchor="middle">The scripts run locally. Your conversation, including whatever Claude reads, goes to Anthropic, like any Claude Code session.</text>
+</svg>

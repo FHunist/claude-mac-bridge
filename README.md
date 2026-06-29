@@ -20,6 +20,12 @@ claude: 🌙 Overnight  | 4 new mails, one from your advisor needs a reply
 >
 > **It can touch everything on your machine.** These skills run inside Claude Code, which can read and modify files and run shell commands on your Mac, and they hand the assistant a working path into your calendar, mail, and reminders. The scripts run locally and do not send your data anywhere themselves, but anything Claude reads through them (mail, events, reminders) becomes conversation context and is sent to **Anthropic's servers** for the model to process, just like everything else in a Claude Code session. Only install this if you are comfortable letting an LLM read your data and act on your machine on your behalf.
 
+## How it works
+
+<p align="center">
+  <img src="docs/architecture.svg" width="860" alt="Architecture diagram: you ask Claude Code, which runs local AppleScript and icalBuddy skills against Calendar, Mail, and Reminders, while your conversation including whatever it reads is sent to Anthropic's servers.">
+</p>
+
 ## What's in the box
 
 | Skill | What it does |
