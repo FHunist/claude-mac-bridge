@@ -6,12 +6,19 @@ The idea: your Google / Exchange / iCloud accounts already sync into Calendar.ap
 
 ```
 you: /plan-day
-claude: 🌙 Overnight  · 4 new mails, one from your advisor needs a reply
-        📅 Today      · 10:00 standup → 14:00 1:1 (Bldg 4) → 17:00 gym
-        🕳 Gaps       · 11:00–13:30 free (2.5h) → suggest: finish the draft
-        ✅ Priorities · 1) reply to advisor  2) submit form  3) draft slides
-        🎯 Start here · reply to the advisor while it is quiet
+claude: 🌙 Overnight  | 4 new mails, one from your advisor needs a reply
+        📅 Today      | 10:00 standup -> 14:00 1:1 (Bldg 4) -> 17:00 gym
+        🕳 Gaps       | 11:00-13:30 free (2.5h) -> suggest: finish the draft
+        ✅ Priorities | 1) reply to advisor, 2) submit form, 3) draft slides
+        🎯 Start here | reply to the advisor while it is quiet
 ```
+
+> [!WARNING]
+> **Read this before installing.**
+>
+> **It is vibe-coded.** This was built fast and iteratively with an LLM. It is not formally tested, reviewed, or audited. Read the scripts yourself before you trust them; they are short on purpose.
+>
+> **It can touch everything on your machine.** These skills run inside Claude Code, which can read and modify files and run shell commands on your Mac, and they hand the assistant a working path into your calendar, mail, and reminders. Everything runs locally and nothing is sent to a third party, but "local" still means full local access. Only install this if you are comfortable letting an LLM read your data and act on your machine on your behalf.
 
 ## What's in the box
 
